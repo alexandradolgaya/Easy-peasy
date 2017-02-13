@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RequestRecordingCell" id="vCP-Pb-Xq4" customClass="RequestRecordingCell" customModule="pingget" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vCP-Pb-Xq4" id="pqJ-mI-Ep4">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="de3-0G-Mhw">
+                        <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPp-R5-KrG">
+                                <rect key="frame" x="10" y="2" width="18" height="22"/>
+                                <state key="normal" image="icn_play_black"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMz-oe-PSt">
+                                <rect key="frame" x="331" y="2" width="18" height="22"/>
+                                <state key="normal" image="icn_delete_attachment"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRs-dp-cud">
+                                <rect key="frame" x="284.5" y="6" width="26.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jwy-Mm-4Tp">
+                                <rect key="frame" x="48" y="12" width="216.5" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZV-pW-Vmp">
+                                <rect key="frame" x="0.0" y="0.0" width="319" height="28"/>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="vCP-Pb-Xq4" eventType="touchUpInside" id="5MJ-9x-BBm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5d-CS-trL">
+                                <rect key="frame" x="319" y="0.0" width="40" height="28"/>
+                                <connections>
+                                    <action selector="removeButtonPressed:" destination="vCP-Pb-Xq4" eventType="touchUpInside" id="As6-Nd-KjX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a5d-CS-trL" firstAttribute="leading" secondItem="NZV-pW-Vmp" secondAttribute="trailing" id="8NS-6Q-hnI"/>
+                            <constraint firstItem="jwy-Mm-4Tp" firstAttribute="centerY" secondItem="wPp-R5-KrG" secondAttribute="centerY" id="CBl-Sl-POk"/>
+                            <constraint firstItem="NZV-pW-Vmp" firstAttribute="leading" secondItem="de3-0G-Mhw" secondAttribute="leading" id="El4-Ee-1Dr"/>
+                            <constraint firstAttribute="trailing" secondItem="NZV-pW-Vmp" secondAttribute="trailing" constant="40" id="ElX-5N-8iF"/>
+                            <constraint firstItem="wMz-oe-PSt" firstAttribute="leading" secondItem="kRs-dp-cud" secondAttribute="trailing" constant="20" id="MKV-pT-962"/>
+                            <constraint firstAttribute="bottom" secondItem="NZV-pW-Vmp" secondAttribute="bottom" id="RHv-Ao-rsc"/>
+                            <constraint firstAttribute="trailing" secondItem="wMz-oe-PSt" secondAttribute="trailing" constant="10" id="TNO-Tr-z2V"/>
+                            <constraint firstAttribute="trailing" secondItem="a5d-CS-trL" secondAttribute="trailing" id="bfD-EJ-w3v"/>
+                            <constraint firstItem="wPp-R5-KrG" firstAttribute="centerY" secondItem="de3-0G-Mhw" secondAttribute="centerY" id="diX-au-MJi"/>
+                            <constraint firstAttribute="bottom" secondItem="a5d-CS-trL" secondAttribute="bottom" id="ePB-NN-b6J"/>
+                            <constraint firstItem="wMz-oe-PSt" firstAttribute="centerY" secondItem="de3-0G-Mhw" secondAttribute="centerY" id="hZn-6c-w3P"/>
+                            <constraint firstItem="a5d-CS-trL" firstAttribute="top" secondItem="de3-0G-Mhw" secondAttribute="top" id="hxA-rf-haA"/>
+                            <constraint firstItem="jwy-Mm-4Tp" firstAttribute="leading" secondItem="wPp-R5-KrG" secondAttribute="trailing" constant="20" id="oZ1-EH-7aP"/>
+                            <constraint firstItem="kRs-dp-cud" firstAttribute="centerY" secondItem="wMz-oe-PSt" secondAttribute="centerY" id="pYV-Ot-2jX"/>
+                            <constraint firstItem="NZV-pW-Vmp" firstAttribute="top" secondItem="de3-0G-Mhw" secondAttribute="top" id="to0-oE-KoO"/>
+                            <constraint firstItem="wPp-R5-KrG" firstAttribute="leading" secondItem="de3-0G-Mhw" secondAttribute="leading" constant="10" id="wqO-3a-8c9"/>
+                            <constraint firstItem="kRs-dp-cud" firstAttribute="leading" secondItem="jwy-Mm-4Tp" secondAttribute="trailing" constant="20" id="zlx-jO-y0r"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="de3-0G-Mhw" firstAttribute="top" secondItem="pqJ-mI-Ep4" secondAttribute="top" constant="8" id="BXi-Ds-jfQ"/>
+                    <constraint firstItem="de3-0G-Mhw" firstAttribute="leading" secondItem="pqJ-mI-Ep4" secondAttribute="leading" constant="8" id="Ebi-9U-4mn"/>
+                    <constraint firstAttribute="trailing" secondItem="de3-0G-Mhw" secondAttribute="trailing" constant="8" id="flN-ce-LvM"/>
+                    <constraint firstAttribute="bottom" secondItem="de3-0G-Mhw" secondAttribute="bottom" constant="8" id="n6X-dL-Jay"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="playButton" destination="wPp-R5-KrG" id="7Ph-bV-8BQ"/>
+                <outlet property="progressView" destination="jwy-Mm-4Tp" id="1mg-Za-tST"/>
+                <outlet property="removeButton" destination="wMz-oe-PSt" id="LrC-Me-Opj"/>
+                <outlet property="roundedView" destination="de3-0G-Mhw" id="mwz-S7-4ea"/>
+                <outlet property="timerLabel" destination="kRs-dp-cud" id="scJ-p0-fDO"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icn_delete_attachment" width="18" height="18"/>
+        <image name="icn_play_black" width="18" height="18"/>
+    </resources>
+</document>

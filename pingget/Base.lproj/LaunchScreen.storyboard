@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Regular.otf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkg" translatesAutoresizingMaskIntoConstraints="NO" id="8Hl-A8-wZR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to get stuff done?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dP-qj-UBk">
+                                <rect key="frame" x="94.5" y="393.5" width="186" height="19"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logomark" translatesAutoresizingMaskIntoConstraints="NO" id="zdB-gO-hVJ">
+                                <rect key="frame" x="147.5" y="203.5" width="79" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logotype" translatesAutoresizingMaskIntoConstraints="NO" id="I8Q-hG-Sdm">
+                                <rect key="frame" x="93" y="333.5" width="188" height="50"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8Hl-A8-wZR" secondAttribute="trailing" id="BLy-dg-zVY"/>
+                            <constraint firstItem="I8Q-hG-Sdm" firstAttribute="top" secondItem="zdB-gO-hVJ" secondAttribute="bottom" constant="50" id="Cpe-vF-AIz"/>
+                            <constraint firstItem="zdB-gO-hVJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DDj-Ez-sm5"/>
+                            <constraint firstItem="5dP-qj-UBk" firstAttribute="top" secondItem="I8Q-hG-Sdm" secondAttribute="bottom" constant="10" id="KwM-3k-taO"/>
+                            <constraint firstItem="I8Q-hG-Sdm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="25" id="MBp-wU-cRK"/>
+                            <constraint firstItem="8Hl-A8-wZR" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="Npk-0x-kJ0"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="8Hl-A8-wZR" secondAttribute="bottom" id="eVz-Fm-7Ea"/>
+                            <constraint firstItem="8Hl-A8-wZR" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="n1x-aV-O2U"/>
+                            <constraint firstItem="5dP-qj-UBk" firstAttribute="centerX" secondItem="I8Q-hG-Sdm" secondAttribute="centerX" id="nmm-iq-ivl"/>
+                            <constraint firstItem="I8Q-hG-Sdm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ucb-wk-e5l"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logomark" width="79" height="80"/>
+        <image name="Logotype" width="188" height="50"/>
+        <image name="bkg" width="375" height="667"/>
+    </resources>
+</document>
